@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>La Mision del Huevo Secreto</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <section class="intro" id="intro">
+        <div class="intro__sky" aria-hidden="true">
+          <span class="cloud cloud--one"></span>
+          <span class="cloud cloud--two"></span>
+          <span class="coin coin--one"></span>
+          <span class="coin coin--two"></span>
+          <span class="egg egg--intro"></span>
+        </div>
+
+        <form class="intro__content" id="playerForm">
+          <p class="kicker">Mision familiar</p>
+          <h1>El huevo secreto</h1>
+          <p>
+            Antes de abrir la sorpresa, decinos quien esta jugando. La mision y
+            el mensaje final cambian segun tu lugar en la familia.
+          </p>
+
+          <div class="form-grid">
+            <label>
+              <span>Tu nombre</span>
+              <input id="playerName" name="playerName" type="text" maxlength="24" autocomplete="name" placeholder="Ej: Marta" required />
+            </label>
+
+            <label>
+              <span>Parentesco</span>
+              <select id="relation" name="relation" required>
+                <option value="abuela">Abuela</option>
+                <option value="abuelo">Abuelo</option>
+                <option value="tia">Tia</option>
+                <option value="tio">Tio</option>
+                <option value="prima">Prima</option>
+                <option value="primo">Primo</option>
+                <option value="amiga">Amiga</option>
+                <option value="amigo">Amigo</option>
+                <option value="familia">Familia</option>
+              </select>
+            </label>
+          </div>
+
+          <button class="primary-btn" id="startButton" type="submit">
+            Empezar mision
+          </button>
+        </form>
+      </section>
+
+      <section class="hud" aria-live="polite">
+        <div>
+          <span class="hud__label">Jugador</span>
+          <strong id="playerBadge">Invitada</strong>
+        </div>
+        <div>
+          <span class="hud__label">Reliquias</span>
+          <strong id="score">0 / 6</strong>
+        </div>
+        <div>
+          <span class="hud__label">Mision</span>
+          <strong id="hint">Completa las pistas</strong>
+        </div>
+      </section>
+
+      <section class="stage" id="stage" aria-label="Minijuego de revelacion">
+        <div class="skyline" aria-hidden="true">
+          <span class="cloud cloud--stage-one"></span>
+          <span class="cloud cloud--stage-two"></span>
+          <span class="hill hill--left"></span>
+          <span class="hill hill--right"></span>
+        </div>
+        <canvas id="gameCanvas" width="1040" height="560" tabindex="0"></canvas>
+        <div class="touch-controls" aria-label="Controles tactiles">
+          <button type="button" data-control="left" aria-label="Mover izquierda">L</button>
+          <button type="button" data-control="jump" aria-label="Saltar">J</button>
+          <button type="button" data-control="right" aria-label="Mover derecha">R</button>
+        </div>
+      </section>
+
+      <section class="reveal" id="reveal" aria-hidden="true">
+        <div class="reveal__burst" aria-hidden="true"></div>
+        <div class="reveal__panel">
+          <p class="kicker">Sorpresa desbloqueada</p>
+          <h2 id="revealTitle">Sorpresa desbloqueada</h2>
+          <p id="revealMessage">
+            Gracias por jugar y ser parte de esta alegria.
+          </p>
+          <div class="reveal__actions">
+            <button class="primary-btn" id="playAgainButton" type="button">
+              Jugar otra vez
+            </button>
+            <button class="secondary-btn" id="newPlayerButton" type="button">
+              Cambiar jugador
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>

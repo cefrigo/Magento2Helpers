@@ -107,39 +107,48 @@ const finalEgg = {
 const relationCopy = {
   abuela: {
     badge: "Abuela",
-    final: "Preparate, {name}: Lucy viene en camino y ya tiene abuela para llenarla de mimos.",
+    title: "Vas a ser abuela de Lucy",
+    final: "Abuela {name}, Lucy viene en camino y ya tiene a quien llenarla de mimos.",
   },
   abuelo: {
     badge: "Abuelo",
-    final: "{name}, Lucy viene en camino y ya tiene abuelo para historias, juegos y abrazos.",
+    title: "Vas a ser abuelo de Lucy",
+    final: "Abuelo {name}, Lucy viene en camino y ya tiene a quien pedirle historias, juegos y abrazos.",
   },
   tia: {
     badge: "Tia",
-    final: "{name}, vas a ser tia de Lucy. Oficialmente queda habilitado el modo consentidora.",
+    title: "Vas a ser tia de Lucy",
+    final: "Tia {name}, oficialmente queda habilitado el modo consentidora.",
   },
   tio: {
     badge: "Tio",
-    final: "{name}, vas a ser tio de Lucy. Ya podes ir practicando las mejores caras graciosas.",
+    title: "Vas a ser tio de Lucy",
+    final: "Tio {name}, ya podes ir practicando las mejores caras graciosas.",
   },
   prima: {
     badge: "Prima",
-    final: "{name}, Lucy viene en camino y ya tiene prima para compartir secretos y aventuras.",
+    title: "Vas a ser prima de Lucy",
+    final: "Prima {name}, Lucy viene en camino y ya tiene companera de secretos y aventuras.",
   },
   primo: {
     badge: "Primo",
-    final: "{name}, Lucy viene en camino y ya tiene primo para jugar, cuidar y acompanar.",
+    title: "Vas a ser primo de Lucy",
+    final: "Primo {name}, Lucy viene en camino y ya tiene con quien jugar, crecer y compartir.",
   },
   amiga: {
     badge: "Amiga",
-    final: "{name}, Lucy viene en camino y ya tiene una amiga de la familia esperandola con amor.",
+    title: "Lucy viene en camino",
+    final: "Amiga {name}, Lucy ya tiene una persona hermosa de la familia esperandola con amor.",
   },
   amigo: {
     badge: "Amigo",
-    final: "{name}, Lucy viene en camino y ya tiene un amigo de la familia listo para celebrarla.",
+    title: "Lucy viene en camino",
+    final: "Amigo {name}, Lucy ya tiene alguien de la familia listo para celebrarla.",
   },
   familia: {
     badge: "Familia",
-    final: "{name}, Lucy viene en camino y ya tiene una familia enorme esperandola.",
+    title: "Lucy viene en camino",
+    final: "Familia {name}, Lucy viene en camino y ya tiene una familia enorme esperandola.",
   },
 };
 
@@ -219,7 +228,7 @@ function revealSecret() {
   won = true;
   burstConfetti();
   document.title = "Lucy viene en camino";
-  revealTitle.textContent = "Lucy viene en camino";
+  revealTitle.textContent = getCopy().title;
   revealMessage.textContent = formatMessage(getCopy().final);
   setTimeout(() => {
     reveal.classList.add("is-visible");

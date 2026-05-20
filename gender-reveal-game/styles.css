@@ -350,18 +350,18 @@ canvas {
   position: relative;
   z-index: 4;
   display: grid;
-  grid-template-columns: repeat(3, 72px);
+  grid-template-columns: repeat(3, 92px);
   justify-content: center;
-  gap: 12px;
+  gap: 18px;
   width: min(1040px, 100%);
-  margin: 14px auto 0;
+  margin: 18px auto 0;
 }
 
 .touch-controls button {
-  width: 72px;
-  height: 72px;
+  width: 92px;
+  height: 82px;
   color: var(--ink);
-  font-size: 1.15rem;
+  font-size: 1rem;
   font-weight: 900;
   background: rgba(255, 255, 255, 0.9);
   border: 3px solid rgba(36, 49, 79, 0.2);
@@ -464,12 +464,12 @@ canvas {
 
 @media (min-width: 900px) {
   .touch-controls {
-    grid-template-columns: repeat(3, 64px);
+    grid-template-columns: repeat(3, 82px);
   }
 
   .touch-controls button {
-    width: 64px;
-    height: 64px;
+    width: 82px;
+    height: 72px;
   }
 }
 
@@ -517,10 +517,10 @@ canvas {
   .touch-controls {
     position: sticky;
     bottom: 8px;
-    grid-template-columns: repeat(3, minmax(78px, 1fr));
-    gap: 10px;
-    margin-top: 10px;
-    padding: 8px;
+    grid-template-columns: repeat(3, minmax(88px, 1fr));
+    gap: 16px;
+    margin-top: 14px;
+    padding: 12px;
     background: rgba(255, 255, 255, 0.72);
     border: 3px solid rgba(36, 49, 79, 0.14);
     border-radius: 8px;
@@ -529,8 +529,8 @@ canvas {
 
   .touch-controls button {
     width: 100%;
-    height: 78px;
-    font-size: 1.25rem;
+    height: 96px;
+    font-size: 1.1rem;
   }
 
   .reveal__actions {

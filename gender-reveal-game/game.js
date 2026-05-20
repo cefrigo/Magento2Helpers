@@ -58,14 +58,14 @@ const relicsStart = [
     y: 346,
     found: false,
     label: "corazon",
-    message: "Pista 1: alguien muy chiquita ya tiene un nombre guardado.",
+    message: "Pista 1: hay un nombre secreto esperando el momento justo.",
   },
   {
     x: 370,
     y: 280,
     found: false,
     label: "estrella",
-    message: "Pista 2: su risa todavia no llego, pero ya ilumina todo.",
+    message: "Pista 2: una nueva alegria ya esta iluminando todo.",
   },
   {
     x: 554,
